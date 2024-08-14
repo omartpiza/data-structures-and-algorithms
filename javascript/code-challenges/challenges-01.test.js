@@ -41,11 +41,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  const upperCaseArray = [];
-  arr.forEach(String =>{
-    upperCaseArray.push(String.upperCase());
+  const uppercasedArray = [];
+  arr.forEach(str => {
+    uppercasedArray.push(str.toUpperCase());
   });
-  return upperCaseArray;
+  return uppercasedArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.upperCase() + '!';
+  return word.toUpperCase() + '!';
 };
 
 const speaker = (words, callback) => {
@@ -142,7 +142,7 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   const result = [];
   arr.forEach(number => {
-    if (number % 3 === 0 && number % 5 === 0){
+    if (number % 3 === 0 && number % 5 === 0) {
       result.push('Fizz Buzz');
     } else if (number % 3 === 0) {
       result.push('Fizz');
@@ -152,6 +152,7 @@ const fizzbuzz = (arr) => {
       result.push(number);
     }
   });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
